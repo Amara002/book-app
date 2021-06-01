@@ -7,7 +7,7 @@ function LogoutButton() {
     logout,
   } = useAuth0();
 
-  return isAuthenticated && (
+  return  (
     <button onClick={() => {
       logout({ returnTo: window.location.origin });
     }}>Log out</button>

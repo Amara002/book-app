@@ -3,16 +3,17 @@ import { withAuth0 } from '@auth0/auth0-react';
 
 class Profile extends Component {
   render() {
-    const { user } = this.props.auth0;
+    const { user, isAuthenticated  } = this.props.auth0;
+    console.log('hiiii', this.props);
     return (
         <>
-            {/* { isAuthenticated && */}
+            { isAuthenticated &&
                 <>
                     <div>Hello {user.name}</div>
                     <div>Email: {user.email}</div>
                 </>
 
-            {/* } */}
+             } 
         </>
     )
   }
